@@ -42,7 +42,7 @@ class InputItem extends React.Component {
 
 		return (
 			<div>
-				<div className={styles.flex}>
+				<div className={styles.flex} >
 					<TextField
 						label="Добавить новое дело"
 						variant="outlined"
@@ -51,10 +51,10 @@ class InputItem extends React.Component {
 						onChange={event => this.setState({ inputValue: event.target.value.toUpperCase() })}
 						error={this.state.error}
 					/>
-					<IconButton>
+					<IconButton onClick={this.onButtonClick}>
 						<AddBoxIcon
 							fontSize='large'
-							onClick={this.onButtonClick}
+
 						/>
 					</IconButton>
 				</div>
@@ -64,7 +64,7 @@ class InputItem extends React.Component {
 };
 
 InputItem.propTypes = {
-	onButtonClick: PropTypes.func.isRequired
+	onButtonClick: PropTypes.func
 };
 
 export default InputItem;

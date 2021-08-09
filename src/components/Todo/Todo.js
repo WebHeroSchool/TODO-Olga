@@ -31,15 +31,12 @@ const Todo = () => {
 	const [items, setItems] = useState(initialState.items);
 	const [count, setCount] = useState(initialState.count);
 	const [filterItems, setFilterItems] = useState(initialState.items);
-	const [filter, setFilter] = useState('all');
+
 
 	useEffect(() => {
 		setFilterItems(items);
 	}, [items]);
 
-	useEffect(() => {
-		onClickFilter(filter);
-	}, [filter, items]);
 
 	useEffect(() => {
 		localStorage.setItem('items', JSON.stringify(items));
@@ -94,7 +91,6 @@ const Todo = () => {
 				filterItemList = initialState.items;
 		}
 		setFilterItems(filterItemList);
-		setFilter(e);
 	}
 	const onClickDeleteAll = () => {
 		const emptyItemList = [];

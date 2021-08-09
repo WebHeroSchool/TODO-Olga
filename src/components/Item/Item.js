@@ -29,9 +29,9 @@ class Item extends React.Component {
                 </label>
             </div>
             <div>
-                <IconButton aria-label="delete" >
+                <IconButton aria-label="delete" onClick={() => onClickDelete(id)}>
                     <DeleteIcon
-                        onClick={() => onClickDelete(id)}
+
                     />
                 </IconButton>
             </div>

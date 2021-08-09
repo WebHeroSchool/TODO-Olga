@@ -34,7 +34,6 @@ class About extends React.Component {
       {
         data,
       }) => {
-      console.log(data)
       this.setState({
         repoList: data,
         isLoading: false,
