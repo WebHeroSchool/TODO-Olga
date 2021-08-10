@@ -20,7 +20,7 @@ class About extends React.Component {
     avatarURL: [],
     userBio: [],
     gitHubLink: '',
-    pageSize: 3,
+    pageSize: 2,
     totalRepoCount: 0,
     currentPage: 1
   };

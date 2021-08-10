@@ -8,24 +8,9 @@ const Todo = () => {
 
 	const initialState = {
 		items: JSON.parse(localStorage.getItem('items')) || [
-			{
-				value: 'Покормить кота',
-				isDone: true,
-				id: 1
-			},
-			{
-				value: 'Сходить на работу',
-				isDone: false,
-				id: 2
 
-			},
-			{
-				value: 'Полить цветы',
-				isDone: true,
-				id: 3
-			}
 		],
-		count: JSON.parse(localStorage.getItem('count')) || 3,
+		count: JSON.parse(localStorage.getItem('count')) || 0,
 	};
 
 	const [items, setItems] = useState(initialState.items);
