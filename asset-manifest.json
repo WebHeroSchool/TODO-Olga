@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/TODO-Olga/static/css/main.e7f23038.chunk.css",
+    "main.js": "/TODO-Olga/static/js/main.a99f6cd5.chunk.js",
+    "main.js.map": "/TODO-Olga/static/js/main.a99f6cd5.chunk.js.map",
+    "runtime-main.js": "/TODO-Olga/static/js/runtime-main.1be952f6.js",
+    "runtime-main.js.map": "/TODO-Olga/static/js/runtime-main.1be952f6.js.map",
+    "static/js/2.39f3cb4b.chunk.js": "/TODO-Olga/static/js/2.39f3cb4b.chunk.js",
+    "static/js/2.39f3cb4b.chunk.js.map": "/TODO-Olga/static/js/2.39f3cb4b.chunk.js.map",
+    "index.html": "/TODO-Olga/index.html",
+    "precache-manifest.9b4cdbc1d1d5102e056981ad1ecd6bf4.js": "/TODO-Olga/precache-manifest.9b4cdbc1d1d5102e056981ad1ecd6bf4.js",
+    "service-worker.js": "/TODO-Olga/service-worker.js",
+    "static/css/main.e7f23038.chunk.css.map": "/TODO-Olga/static/css/main.e7f23038.chunk.css.map",
+    "static/js/2.39f3cb4b.chunk.js.LICENSE.txt": "/TODO-Olga/static/js/2.39f3cb4b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1be952f6.js",
+    "static/js/2.39f3cb4b.chunk.js",
+    "static/css/main.e7f23038.chunk.css",
+    "static/js/main.a99f6cd5.chunk.js"
+  ]
+}
