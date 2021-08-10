@@ -7,7 +7,7 @@ import styles from './Todo.module.css';
 const Todo = () => {
 
 	const initialState = {
-		items: [
+		items: JSON.parse(localStorage.getItem('items')) || [
 			{
 				value: 'Покормить кота',
 				isDone: true,
@@ -25,22 +25,26 @@ const Todo = () => {
 				id: 3
 			}
 		],
-		count: 3,
+		count: JSON.parse(localStorage.getItem('count')) || 3,
 	};
 
 	const [items, setItems] = useState(initialState.items);
 	const [count, setCount] = useState(initialState.count);
-	const [error, serError] = useState('');
 	const [filterItems, setFilterItems] = useState(initialState.items);
-	const [filter, setFilter] = useState('all');
+
 
 	useEffect(() => {
 		setFilterItems(items);
-	}, []);
+	}, [items]);
+
 
 	useEffect(() => {
-		onClickFilter(filter);
-	}, [items]);
+		localStorage.setItem('items', JSON.stringify(items));
+	});
+
+	useEffect(() => {
+		localStorage.setItem('count', JSON.stringify(count));
+	});
 
 	const onClickDone = id => {
 		const newItemList = items.map(item => {
@@ -48,17 +52,15 @@ const Todo = () => {
 			if (item.id === id) {
 				newItem.isDone = !item.isDone
 			}
-
 			return newItem;
 		});
-
 		setItems(newItemList);
 	};
 
 	const onClickDelete = id => {
 		const newItemList = items.filter(item => item.id !== id);
 		setItems(newItemList);
-		setCount(count => count - 1)
+		setCount(count => count - 1);
 	};
 
 	const onClickAdd = value => {
@@ -70,7 +72,6 @@ const Todo = () => {
 				id: count + 1
 			}
 		];
-
 		setItems(newItemList);
 		setCount(count => count + 1);
 	};
@@ -90,7 +91,10 @@ const Todo = () => {
 				filterItemList = initialState.items;
 		}
 		setFilterItems(filterItemList);
-		setFilter(e);
+	}
+	const onClickDeleteAll = () => {
+		const emptyItemList = [];
+		setItems(emptyItemList);
 	}
 
 	return (
@@ -98,7 +102,7 @@ const Todo = () => {
 			<h1 className={styles.title}>Список дел на сегодня:</h1>
 			<InputItem onClickAdd={onClickAdd} items={items} />
 			<ItemList onClickDone={onClickDone} onClickDelete={onClickDelete} items={filterItems} onClickFilter={onClickFilter} />
-			<Footer count={count} items={items} onClickFilter={onClickFilter} />
+			<Footer count={filterItems.length} items={items} onClickFilter={onClickFilter} onClickDeleteAll={onClickDeleteAll} />
 		</div>);
 };
 
