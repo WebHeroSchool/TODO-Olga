@@ -9,10 +9,11 @@ import About from '../About/About';
 import Contacts from '../Contacts/Contacts';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
+import { HashRouter } from 'react-router-dom';
 
 import styles from './App.module.css';
 
-const App = () => (<Router>
+const App = () => (<HashRouter>
   <div className={styles.wrap}>
     <MenuList className={styles.sidebar}>
       <Link to='/' className={styles.link}>
@@ -28,7 +29,7 @@ const App = () => (<Router>
       <Route path='/contacts' component={Contacts} />
     </div>
   </div>
-</Router>);
+</HashRouter>);
 
 
 export default App;
