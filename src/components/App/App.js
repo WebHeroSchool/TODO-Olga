@@ -13,7 +13,7 @@ import MenuList from '@material-ui/core/MenuList';
 
 import styles from './App.module.css';
 
-const App = () => (
+const App = () => (<Router>
   <div className={styles.wrap}>
     <MenuList className={styles.sidebar}>
       <Link to='/' className={styles.link}>
@@ -29,7 +29,7 @@ const App = () => (
       <Route path='/contacts' component={Contacts} />
     </div>
   </div>
-);
+</Router>);
 
 
 export default App;
