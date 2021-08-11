@@ -10,7 +10,7 @@ class Item extends React.Component {
 
 
     render() {
-        const { value, isDone, onClickDone, id, onClickDelete, onClickFilter } = this.props;
+        const { value, isDone, onClickDone, id, onClickDelete } = this.props;
 
         return (<div className={styles.flex}>
             <div>
@@ -29,9 +29,9 @@ class Item extends React.Component {
                 </label>
             </div>
             <div>
-                <IconButton aria-label="delete" >
+                <IconButton aria-label="delete" onClick={() => onClickDelete(id)}>
                     <DeleteIcon
-                        onClick={() => onClickDelete(id)}
+
                     />
                 </IconButton>
             </div>

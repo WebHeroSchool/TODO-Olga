@@ -1,14 +1,15 @@
 import React from 'react';
 import {
-    BrowserRouter as Router,
-    Route,
-    Link,
+  BrowserRouter as Router,
+  Route,
+  Link,
 } from 'react-router-dom';
 import Todo from '../Todo/Todo';
 import About from '../About/About';
 import Contacts from '../Contacts/Contacts';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
+
 
 import styles from './App.module.css';
 
@@ -22,7 +23,7 @@ const App = () => (<Router>
       <Link to='/contacts' className={styles.link}>
         <MenuItem>Контакты</MenuItem></Link>
     </MenuList>
-    <div>
+    <div className={styles.main}>
       <Route path='/' exact component={About} />
       <Route path='/todo' component={Todo} />
       <Route path='/contacts' component={Contacts} />
@@ -31,4 +32,4 @@ const App = () => (<Router>
 </Router>);
 
 
-export default App; 
+export default App;
