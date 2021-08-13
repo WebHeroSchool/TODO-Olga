@@ -45,7 +45,6 @@ const Todo = () => {
 	const onClickDelete = id => {
 		const newItemList = items.filter(item => item.id !== id);
 		setItems(newItemList);
-		setCount(count => count - 1);
 	};
 
 	const onClickAdd = value => {

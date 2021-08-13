@@ -13,14 +13,22 @@
 }
 @media (max-width: 280px) {
   .content {
-    width: 530px;
+    width: 250px;
     margin-top: 20px;
+    padding: 5px;
+  }
+  .title {
+    font-size: 20px;
   }
 }
-@media (min-width: 320px) and (max-width: 414px) {
+@media (min-width: 320px) and (max-width: 540px) {
   .content {
-    width: 650px;
+    width: 280px;
     margin-top: 20px;
+    padding: 5px;
+  }
+  .title {
+    font-size: 22px;
   }
 }
 @media (min-width: 541px) and (max-width: 768px) {

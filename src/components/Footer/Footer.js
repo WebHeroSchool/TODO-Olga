@@ -9,7 +9,7 @@ const Footer = ({ count, onClickFilter, onClickDeleteAll }) => {
         <div className={styles.wrap}>
             <Button variant="contained">Количество: {count}</Button>
             <div>
-                <ButtonGroup variant="contained">
+                <ButtonGroup variant="contained" className={styles.buttons}>
                     <Button id='all' onClick={(e) => onClickFilter('all')}>Все</Button>
                     <Button id='active' onClick={(e) => onClickFilter('active')}>Активные</Button>
                     <Button id='completed' onClick={(e) => onClickFilter('completed')}>Выполненные</Button>
