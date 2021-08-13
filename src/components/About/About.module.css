@@ -7,6 +7,11 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
   font-family: 'Roboto', sans-serif;
 }
+.projects_title {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
 .link_github {
   text-align: center;
   font-size: 20px;
@@ -25,7 +30,7 @@
   font-weight: lighter;
 }
 .repo {
-	margin-top: 25px;
+	margin-top: 15px;
 }
 .avatar_wrap {
   margin: 25px;
@@ -76,7 +81,7 @@
 .wrap_repo {
   display: flex;
   justify-content: space-between;
-  margin: 20px 0 20px 0;
+  margin: 10px 0 20px 0;
 }
 .repo_language_and_update {
   display: flex;
@@ -95,35 +100,49 @@
   margin-top: 30px;
 }
 .img_whs {
-  margin-top: 70px;
+  margin-top: 15px;
   display: flex;
   justify-content: flex-end;
 }
 @media (max-width: 280px) {
   .wrap {
-    width: 530px;
+    width: 250px;
     margin-top: 20px;
+    padding: 5px;
   }
   .repo_name {
     font-size: 7px;
+  }
+  .projects_title {
+    text-align: center;
+  }
+  .projects_ul {
+    text-align: center;
   }
   .avatar_wrap {
     margin: 10px;
   }
   .img_whs {
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
   .link_github {
-    font-size: 18px;
+    font-size: 15px;
   }
   .repo_name {
-    font-size: 18px;
+    font-size: 15px;
+  }
+  .info {
+    display: block;
+  }
+  .projects_ul {
+    font-size: 14px;
   }
 }
 @media (min-width: 320px) and (max-width: 540px) {
   .wrap {
-    width: 650px;
+    width: 280px;
     margin-top: 20px;
+    padding: 2px;
   }
   .repo_name {
     font-size: 7px;
@@ -132,13 +151,22 @@
     margin: 10px;
   }
   .img_whs {
-    justify-content: flex-start;
+    justify-content: flex-end;
+  }
+  .projects_title {
+    text-align: center;
+  }
+  .projects_ul {
+    text-align: center;
   }
   .link_github {
-    font-size: 20px;
+    font-size: 15px;
   }
   .repo_name {
     font-size: 18px;
+  }
+  .info {
+    display: block;
   }
 }
 @media (min-width: 541px) and (max-width: 768px) {
@@ -149,11 +177,17 @@
   .repo_name {
     font-size: 7px;
   }
+  .projects_title {
+    text-align: center;
+  }
+  .projects_ul {
+    text-align: center;
+  }
   .avatar_wrap {
     margin: 10px;
   }
   .img_whs {
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
   .link_github {
     font-size: 20px;

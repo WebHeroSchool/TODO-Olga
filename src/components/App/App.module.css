@@ -26,27 +26,29 @@ body {
 @media (max-width: 280px) {
   .wrap {
     display: block;
+    width: 250px;
   }
   .sidebar {
-    width: 550px;
+    width: 250px;
     display: flex;
     justify-content: space-around;
   }
   .main {
-    width: 600px;
+    width: 250px;
   }
 }
 @media (min-width: 320px) and (max-width: 540px) {
   .wrap {
     display: block;
+    width: 300px;    
   }
   .sidebar {
-    width: 670px;
+    width: 280px;
     display: flex;
     justify-content: space-around;
   }
   .main {
-    width: 700px;
+    width: 300px;
   }
 }
 @media (min-width: 541px) and (max-width: 768px) {

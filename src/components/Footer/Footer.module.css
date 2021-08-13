@@ -5,3 +5,21 @@
 .buttons {
 	color: red;
 }
+@media (max-width: 280px) {
+    .wrap {
+    display: block;
+    width: 250px;
+    }
+    .buttons {
+        width: 250px;
+    }
+}
+    @media (min-width: 320px) and (max-width: 540px) {
+        .wrap {
+          display: block;
+          width: 280px;    
+        }
+        .buttons {
+            width: 280px;
+        }
+      }
